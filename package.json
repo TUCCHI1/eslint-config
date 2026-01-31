@@ -1,5 +1,5 @@
 {
-  "name": "eslint-config-modern-ts",
+  "name": "@tucch1/eslint-config",
   "version": "1.0.0",
   "description": "Modern ESLint config with TypeScript strict, unicorn, and complexity rules",
   "author": "tucch1",
@@ -22,7 +22,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/tucch1/eslint-config-modern-ts"
+    "url": "https://github.com/tucch1/eslint-config"
   },
   "peerDependencies": {
     "eslint": "^9.0.0",

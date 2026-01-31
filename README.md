@@ -1,4 +1,4 @@
-# eslint-config-modern-ts
+# @tucch1/eslint-config
 
 Modern ESLint config with strict TypeScript and unicorn rules.
 
@@ -19,7 +19,7 @@ Modern ESLint config with strict TypeScript and unicorn rules.
 ## Install
 
 ```bash
-npm install -D eslint-config-modern-ts eslint typescript
+npm install -D @tucch1/eslint-config eslint typescript
 ```
 
 ## Usage
@@ -27,17 +27,17 @@ npm install -D eslint-config-modern-ts eslint typescript
 Create `eslint.config.js`:
 
 ```js
-import modernConfig from "eslint-config-modern-ts";
+import config from "@tucch1/eslint-config";
 
-export default modernConfig();
+export default config();
 ```
 
 ### With Options
 
 ```js
-import modernConfig from "eslint-config-modern-ts";
+import config from "@tucch1/eslint-config";
 
-export default modernConfig({
+export default config({
   files: ["src/**/*.ts"],
   ignores: ["dist/", "coverage/"],
   maxDepth: 2, // Allow one level of nesting if needed
@@ -52,10 +52,10 @@ export default modernConfig({
 Add `Bun` global:
 
 ```js
-import modernConfig from "eslint-config-modern-ts";
+import config from "@tucch1/eslint-config";
 
 export default [
-  ...modernConfig(),
+  ...config(),
   {
     languageOptions: {
       globals: { Bun: "readonly" },

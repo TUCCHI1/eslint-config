@@ -1,4 +1,4 @@
-# @tucchi/eslint-config
+# @tucchi-/eslint-config
 
 Modern ESLint config with strict TypeScript and unicorn rules.
 
@@ -19,7 +19,7 @@ Modern ESLint config with strict TypeScript and unicorn rules.
 ## Install
 
 ```bash
-npm install -D @tucchi/eslint-config eslint typescript
+npm install -D @tucchi-/eslint-config eslint typescript
 ```
 
 ## Usage
@@ -27,7 +27,7 @@ npm install -D @tucchi/eslint-config eslint typescript
 Create `eslint.config.js`:
 
 ```js
-import config from "@tucchi/eslint-config";
+import config from "@tucchi-/eslint-config";
 
 export default config();
 ```
@@ -35,7 +35,7 @@ export default config();
 ### With Options
 
 ```js
-import config from "@tucchi/eslint-config";
+import config from "@tucchi-/eslint-config";
 
 export default config({
   files: ["src/**/*.ts"],
@@ -52,7 +52,7 @@ export default config({
 Add `Bun` global:
 
 ```js
-import config from "@tucchi/eslint-config";
+import config from "@tucchi-/eslint-config";
 
 export default [
   ...config(),

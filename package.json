@@ -1,8 +1,8 @@
 {
-  "name": "@tucchi/eslint-config",
+  "name": "@tucchi-/eslint-config",
   "version": "1.0.0",
   "description": "Modern ESLint config with TypeScript strict, unicorn, and complexity rules",
-  "author": "tucchi",
+  "author": "tucchi-",
   "license": "MIT",
   "type": "module",
   "main": "index.js",
@@ -22,7 +22,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/tucchi/eslint-config"
+    "url": "https://github.com/tucchi-/eslint-config"
   },
   "peerDependencies": {
     "eslint": "^9.0.0",

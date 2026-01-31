@@ -1,7 +1,7 @@
 {
   "name": "@tucchi-/eslint-config",
-  "version": "1.7.0",
-  "description": "Modern ESLint config with TypeScript strict, unicorn, and complexity rules",
+  "version": "1.8.0",
+  "description": "Modern ESLint config with TypeScript strict, unicorn, complexity, and project structure rules",
   "author": "tucchi-",
   "license": "MIT",
   "type": "module",
@@ -20,6 +20,7 @@
     "eslint-config",
     "typescript",
     "unicorn",
+    "project-structure",
     "modern",
     "strict"
   ],
@@ -30,6 +31,7 @@
   "peerDependencies": {
     "@eslint/js": "^9.0.0",
     "eslint": "^9.0.0",
+    "eslint-plugin-project-structure": "^3.14.2",
     "eslint-plugin-unicorn": "^62.0.0",
     "globals": "^15.0.0 || ^16.0.0 || ^17.0.0",
     "typescript": "^5.0.0",

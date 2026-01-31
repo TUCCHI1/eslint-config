@@ -8,14 +8,14 @@ import globals from "globals";
  * @param {Object} options
  * @param {string[]} [options.files] - File patterns to lint (default: ["src/**/*.ts"])
  * @param {string[]} [options.ignores] - Patterns to ignore
- * @param {number} [options.maxDepth] - Maximum nesting depth (default: 3)
+ * @param {number} [options.maxDepth] - Maximum nesting depth (default: 1, no nesting allowed)
  * @param {Object} [options.rules] - Additional rules to override
  */
 export default function modernConfig(options = {}) {
   const {
     files = ["src/**/*.ts", "**/*.ts"],
     ignores = ["node_modules/", "dist/"],
-    maxDepth = 3,
+    maxDepth = 1,
     rules = {},
   } = options;
 

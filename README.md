@@ -14,7 +14,7 @@ Modern ESLint config with strict TypeScript and unicorn rules.
 |----------|-------|
 | TypeScript | `strict`, `stylistic`, no `any`, no `!` assertion |
 | Unicorn | Full `recommended` preset |
-| Complexity | `max-depth: 3`, `max-nested-callbacks: 3`, `complexity: 10` |
+| Complexity | `max-depth: 1` (no nesting), `max-nested-callbacks: 3`, `complexity: 10` |
 
 ## Install
 
@@ -40,7 +40,7 @@ import modernConfig from "eslint-config-modern-ts";
 export default modernConfig({
   files: ["src/**/*.ts"],
   ignores: ["dist/", "coverage/"],
-  maxDepth: 4,
+  maxDepth: 2, // Allow one level of nesting if needed
   rules: {
     "unicorn/no-null": "off", // Override specific rules
   },
@@ -70,7 +70,7 @@ export default [
 - Full variable names (`msg` → `message`, `cb` → `callback`)
 - `node:` protocol for Node.js imports
 - Top-level await preferred
-- No deep nesting (max 3 levels)
+- No nesting allowed (early return pattern enforced)
 - No `any` type
 - No non-null assertions (`!`)
 

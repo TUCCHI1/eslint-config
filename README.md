@@ -19,7 +19,7 @@ Modern ESLint config with strict TypeScript and unicorn rules.
 ## Install
 
 ```bash
-npm install -D @tucchi-/eslint-config eslint typescript
+npm install -D @tucchi-/eslint-config eslint typescript typescript-eslint @eslint/js eslint-plugin-unicorn globals
 ```
 
 ## Usage

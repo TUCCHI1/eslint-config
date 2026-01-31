@@ -1,6 +1,6 @@
 {
   "name": "@tucchi-/eslint-config",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Modern ESLint config with TypeScript strict, unicorn, and complexity rules",
   "author": "tucchi-",
   "license": "MIT",
@@ -22,16 +22,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/tucchi-/eslint-config"
+    "url": "https://github.com/TUCCHI1/eslint-config"
   },
   "peerDependencies": {
+    "@eslint/js": "^9.0.0",
     "eslint": "^9.0.0",
-    "typescript": "^5.0.0"
-  },
-  "dependencies": {
-    "@eslint/js": "^9.39.2",
     "eslint-plugin-unicorn": "^62.0.0",
-    "globals": "^17.2.0",
-    "typescript-eslint": "^8.54.0"
+    "globals": "^15.0.0 || ^16.0.0 || ^17.0.0",
+    "typescript": "^5.0.0",
+    "typescript-eslint": "^8.0.0"
   }
 }

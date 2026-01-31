@@ -3,14 +3,7 @@ import tseslint from "typescript-eslint";
 import unicorn from "eslint-plugin-unicorn";
 import globals from "globals";
 
-/**
- * Modern ESLint config with strict TypeScript and unicorn rules
- * @param {Object} options
- * @param {string[]} [options.files] - File patterns to lint (default: ["src/**/*.ts"])
- * @param {string[]} [options.ignores] - Patterns to ignore
- * @param {number} [options.maxDepth] - Maximum nesting depth (default: 1, no nesting allowed)
- * @param {Object} [options.rules] - Additional rules to override
- */
+// Modern ESLint config with strict TypeScript and unicorn rules
 export default function modernConfig(options = {}) {
   const {
     files = ["src/**/*.ts", "**/*.ts"],
@@ -39,6 +32,7 @@ export default function modernConfig(options = {}) {
 
         // Function style
         "func-style": ["error", "expression"], // arrow function > function
+        "no-ternary": "error", // if/else > ternary
 
         // Complexity
         "max-depth": ["error", maxDepth],

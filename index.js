@@ -86,10 +86,12 @@ export default function modernConfig(options = {}) {
         "no-restricted-syntax": [
           "error",
           { selector: "VariableDeclaration[kind='let']", message: "Use const instead of let" },
+          { selector: "FunctionExpression", message: "Use arrow function instead of function expression" },
+          { selector: "FunctionDeclaration", message: "Use arrow function instead of function declaration" },
         ],
 
         // Function style
-        "func-style": ["error", "expression"], // arrow function > function
+        "prefer-arrow-callback": "error", // arrow function > function in callbacks
         "no-ternary": "error", // if/else > ternary
 
         // Complexity

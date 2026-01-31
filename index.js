@@ -43,6 +43,7 @@ export default function modernConfig(options = {}) {
         "max-depth": ["error", maxDepth],
         "max-nested-callbacks": ["error", 1],
         complexity: ["error", 5],
+        "max-lines": ["error", { max: 200, skipBlankLines: true, skipComments: true }],
 
         // User overrides
         ...rules,

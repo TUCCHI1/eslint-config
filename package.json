@@ -1,0 +1,37 @@
+{
+  "name": "eslint-config-modern-ts",
+  "version": "1.0.0",
+  "description": "Modern ESLint config with TypeScript strict, unicorn, and complexity rules",
+  "author": "tucch1",
+  "license": "MIT",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "eslint",
+    "eslint-config",
+    "typescript",
+    "unicorn",
+    "modern",
+    "strict"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tucch1/eslint-config-modern-ts"
+  },
+  "peerDependencies": {
+    "eslint": "^9.0.0",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@eslint/js": "^9.39.2",
+    "eslint-plugin-unicorn": "^62.0.0",
+    "globals": "^17.2.0",
+    "typescript-eslint": "^8.54.0"
+  }
+}

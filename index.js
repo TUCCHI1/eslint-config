@@ -34,6 +34,10 @@ export default function modernConfig(options = {}) {
         // Variable declarations
         "prefer-const": "error", // const > let
         "no-var": "error", // no var
+        "no-restricted-syntax": [
+          "error",
+          { selector: "VariableDeclaration[kind='let']", message: "Use const instead of let" },
+        ],
 
         // Function style
         "func-style": ["error", "expression"], // arrow function > function

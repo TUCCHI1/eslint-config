@@ -4,7 +4,7 @@
     "": {
       "name": "@tucchi-/eslint-config",
       "devDependencies": {
-        "@tucchi-/eslint-config": "1.5.0",
+        "@tucchi-/eslint-config": "1.6.0",
       },
       "peerDependencies": {
         "@eslint/js": "^9.0.0",
@@ -45,7 +45,7 @@
 
     "@humanwhocodes/retry": ["@humanwhocodes/retry@0.4.3", "", {}, "sha512-bV0Tgo9K4hfPCek+aMAn81RppFKv2ySDQeMoSZuvTASywNTnVJCArCZE2FWqpvIatKu7VMRLWlR1EazvVhDyhQ=="],
 
-    "@tucchi-/eslint-config": ["@tucchi-/eslint-config@1.5.0", "", { "peerDependencies": { "@eslint/js": "^9.0.0", "eslint": "^9.0.0", "eslint-plugin-unicorn": "^62.0.0", "globals": "^15.0.0 || ^16.0.0 || ^17.0.0", "typescript": "^5.0.0", "typescript-eslint": "^8.0.0" } }, "sha512-i4JVN9iWecZiWc3SwG6jxXcvCXqp+poC07Ggy9zE17v9uZCyHkvv1eLTEltLJGZ37wHUo3maEMR2yU+oPAwXtg=="],
+    "@tucchi-/eslint-config": ["@tucchi-/eslint-config@1.6.0", "", { "peerDependencies": { "@eslint/js": "^9.0.0", "eslint": "^9.0.0", "eslint-plugin-unicorn": "^62.0.0", "globals": "^15.0.0 || ^16.0.0 || ^17.0.0", "typescript": "^5.0.0", "typescript-eslint": "^8.0.0" } }, "sha512-RmOSGnjFhTbjzRDNunOOb84qtUIItzadrwogti7kKSGrtoEFQUtNhFg2Hk6K6GCX2yUz1Gcmd9Nc3w3elS4JdQ=="],
 
     "@types/estree": ["@types/estree@1.0.8", "", {}, "sha512-dWHzHa2WqEXI/O1E9OjrocMTKJl2mSrEolh1Iomrv6U+JuNwaHXsXx9bLu5gG7BUWFIN0skIQJQ/L1rIex4X6w=="],
 

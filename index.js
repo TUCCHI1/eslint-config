@@ -1,7 +1,6 @@
 import eslint from "@eslint/js";
 import tseslint from "typescript-eslint";
 import unicorn from "eslint-plugin-unicorn";
-import projectStructure from "eslint-plugin-project-structure";
 import globals from "globals";
 
 // Modern ESLint config with strict TypeScript and unicorn rules
@@ -10,7 +9,6 @@ export default function modernConfig(options = {}) {
     files = ["src/**/*.ts", "**/*.ts"],
     ignores = ["node_modules/", "dist/"],
     maxDepth = 1,
-    maxFilesPerDir = 10,
     rules = {},
   } = options;
 
@@ -21,9 +19,6 @@ export default function modernConfig(options = {}) {
     unicorn.configs.recommended,
     {
       files,
-      plugins: {
-        "project-structure": projectStructure,
-      },
       languageOptions: {
         globals: {
           ...globals.node,
@@ -31,11 +26,6 @@ export default function modernConfig(options = {}) {
         },
       },
       rules: {
-        // Project structure
-        "project-structure/folder-structure": ["error", {
-          structure: { children: [{ name: "*", children: [{ name: "*" }], maxChildren: maxFilesPerDir }] },
-        }],
-
         // TypeScript
         "@typescript-eslint/no-unused-vars": ["error", { argsIgnorePattern: "^_" }],
         "@typescript-eslint/consistent-type-definitions": ["error", "type"], // type > interface
@@ -70,4 +60,4 @@ export default function modernConfig(options = {}) {
 }
 
 // Named exports for granular usage
-export { eslint, tseslint, unicorn, projectStructure, globals };
+export { eslint, tseslint, unicorn, globals };

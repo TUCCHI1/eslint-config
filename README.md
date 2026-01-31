@@ -12,7 +12,7 @@ Modern ESLint config with strict TypeScript and unicorn rules.
 
 | Category | Rules |
 |----------|-------|
-| TypeScript | `strict`, `stylistic`, no `any`, no `!` assertion |
+| TypeScript | `strict`, `stylistic`, no `any`, no `!`, `type` only, arrow functions only |
 | Unicorn | Full `recommended` preset |
 | Complexity | `max-depth: 1` (no nesting), `max-nested-callbacks: 3`, `complexity: 10` |
 
@@ -73,6 +73,8 @@ export default [
 - No nesting allowed (early return pattern enforced)
 - No `any` type
 - No non-null assertions (`!`)
+- `type` only (no `interface`)
+- Arrow functions only (no `function`)
 
 ## License
 

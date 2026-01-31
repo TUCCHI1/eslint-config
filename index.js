@@ -35,6 +35,10 @@ export default function modernConfig(options = {}) {
       rules: {
         // TypeScript
         "@typescript-eslint/no-unused-vars": ["error", { argsIgnorePattern: "^_" }],
+        "@typescript-eslint/consistent-type-definitions": ["error", "type"], // type > interface
+
+        // Function style
+        "func-style": ["error", "expression"], // arrow function > function
 
         // Complexity
         "max-depth": ["error", maxDepth],

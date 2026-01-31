@@ -42,8 +42,8 @@ export default function modernConfig(options = {}) {
 
         // Complexity
         "max-depth": ["error", maxDepth],
-        "max-nested-callbacks": ["error", 3],
-        complexity: ["error", 10],
+        "max-nested-callbacks": ["error", 1],
+        complexity: ["error", 5],
 
         // User overrides
         ...rules,

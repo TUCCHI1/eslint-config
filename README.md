@@ -14,7 +14,7 @@ Modern ESLint config with strict TypeScript and unicorn rules.
 |----------|-------|
 | TypeScript | `strict`, `stylistic`, no `any`, no `!`, `type` only, arrow functions only |
 | Unicorn | Full `recommended` preset |
-| Complexity | `max-depth: 1` (no nesting), `max-nested-callbacks: 3`, `complexity: 10` |
+| Complexity | `max-depth: 1`, `max-nested-callbacks: 1`, `complexity: 5` |
 
 ## Install
 

@@ -1,6 +1,6 @@
 {
   "name": "@tucchi-/eslint-config",
-  "version": "1.8.1",
+  "version": "1.9.0",
   "description": "Modern ESLint config with TypeScript strict, unicorn, and complexity rules",
   "author": "tucchi-",
   "license": "MIT",

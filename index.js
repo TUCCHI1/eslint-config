@@ -29,6 +29,11 @@ export default function modernConfig(options = {}) {
         // TypeScript
         "@typescript-eslint/no-unused-vars": ["error", { argsIgnorePattern: "^_" }],
         "@typescript-eslint/consistent-type-definitions": ["error", "type"], // type > interface
+        "@typescript-eslint/consistent-type-assertions": ["error", { assertionStyle: "never" }], // no type assertions
+
+        // Variable declarations
+        "prefer-const": "error", // const > let
+        "no-var": "error", // no var
 
         // Function style
         "func-style": ["error", "expression"], // arrow function > function

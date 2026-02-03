@@ -88,6 +88,7 @@ export default function modernConfig(options = {}) {
           { selector: "VariableDeclaration[kind='let']", message: "Use const instead of let" },
           { selector: "FunctionExpression", message: "Use arrow function instead of function expression" },
           { selector: "FunctionDeclaration", message: "Use arrow function instead of function declaration" },
+          { selector: "ExportDefaultDeclaration", message: "Use named exports instead of default export" },
         ],
 
         // Function style

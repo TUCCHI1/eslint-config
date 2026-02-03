@@ -41,6 +41,19 @@ const createMaxFilesPerDirRule = (maxFiles) => ({
   }),
 });
 
+// Base no-restricted-syntax rules (without default export ban)
+const baseRestrictedSyntax = [
+  { selector: "VariableDeclaration[kind='let']", message: "Use const instead of let" },
+  { selector: "FunctionExpression", message: "Use arrow function instead of function expression" },
+  { selector: "FunctionDeclaration", message: "Use arrow function instead of function declaration" },
+];
+
+// Full no-restricted-syntax rules (with default export ban)
+const fullRestrictedSyntax = [
+  ...baseRestrictedSyntax,
+  { selector: "ExportDefaultDeclaration", message: "Use named exports instead of default export" },
+];
+
 // Modern ESLint config with strict TypeScript and unicorn rules
 export default function modernConfig(options = {}) {
   const {
@@ -48,10 +61,11 @@ export default function modernConfig(options = {}) {
     ignores = ["node_modules/", "dist/"],
     maxDepth = 1,
     maxFilesPerDir = 10,
+    nextjs = false,
     rules = {},
   } = options;
 
-  return tseslint.config(
+  const configs = [
     eslint.configs.recommended,
     ...tseslint.configs.strict,
     ...tseslint.configs.stylistic,
@@ -83,13 +97,7 @@ export default function modernConfig(options = {}) {
         // Variable declarations
         "prefer-const": "error", // const > let
         "no-var": "error", // no var
-        "no-restricted-syntax": [
-          "error",
-          { selector: "VariableDeclaration[kind='let']", message: "Use const instead of let" },
-          { selector: "FunctionExpression", message: "Use arrow function instead of function expression" },
-          { selector: "FunctionDeclaration", message: "Use arrow function instead of function declaration" },
-          { selector: "ExportDefaultDeclaration", message: "Use named exports instead of default export" },
-        ],
+        "no-restricted-syntax": ["error", ...fullRestrictedSyntax],
 
         // Function style
         "prefer-arrow-callback": "error", // arrow function > function in callbacks
@@ -107,8 +115,20 @@ export default function modernConfig(options = {}) {
     },
     {
       ignores,
-    }
-  );
+    },
+  ];
+
+  // Next.js app router requires default exports for pages/layouts
+  if (nextjs) {
+    configs.push({
+      files: ["src/app/**/*.tsx", "app/**/*.tsx"],
+      rules: {
+        "no-restricted-syntax": ["error", ...baseRestrictedSyntax],
+      },
+    });
+  }
+
+  return tseslint.config(...configs);
 }
 
 // Named exports for granular usage
